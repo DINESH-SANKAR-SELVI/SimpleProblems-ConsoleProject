@@ -1,27 +1,33 @@
 package SIMPLEPROGRAMS.AreaAndPerimeterOfASquareAndRectangle;
 
-import java.util.Scanner;
+public class AreaAndPerimeterOfASquareAndRectangle{
 
-class AreaAndPerimeterOfASquareAndRectangle{
+    Number area = 0;
+    Number perimeter = 0;
 
-    AreaAndPerimeterOfASquareAndRectangle(int a1,int b1){
-
-            System.out.println("THE VALUE OF AREA IS "+(a1*b1)+" AND PERIMETER OF RECTANGLE IS "+(2*(a1*b1)));
-
+    public AreaAndPerimeterOfASquareAndRectangle(int squareDetail) {
+        this.area = squareDetail * squareDetail;
+        this.perimeter = 4 * squareDetail;
     }
 
-    public static void main(String []args){
+    public AreaAndPerimeterOfASquareAndRectangle(int rectangleLength,int rectangleWidth){
+        this.area = rectangleLength * rectangleWidth;
+        this.perimeter = 2 * ( rectangleLength + rectangleWidth);
+    }
 
-        int a,b;
+    public Number getArea() {
+        return area;
+    }
 
-        Scanner io = new Scanner(System.in);
+    public void setArea(Number area) {
+        this.area = area;
+    }
 
-        System.out.println("ENTER THE LENGTH VALUE OF RECTANGLE :- ");
-        a=io.nextInt();
-        System.out.println("ENTER THE WIDETH VALUE OF RECTANGLE :-");
-        b=io.nextInt();
+    public Number getPerimeter() {
+        return perimeter;
+    }
 
-        AreaAndPerimeterOfASquareAndRectangle key = new AreaAndPerimeterOfASquareAndRectangle(a,b);
-
+    public void setPerimeter(Number perimeter) {
+        this.perimeter = perimeter;
     }
 }
